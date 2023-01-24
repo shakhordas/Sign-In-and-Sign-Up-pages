@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign-Up & Sing-In</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8c23de5811.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-md-5">
+  				<div id="form" class="form-box input-group bg-white  py-4 mt-5 ">
+  				    	<div class="row input-group px-5">
+  				    		<i style="font-size: 10px" >Create by SHAKHOR DAS</i>
+  				    		<h2 id="title">Sign-Up</h2>
+  							<div class="input-feild" id="namefeild">
+  								<i class="fa-solid fa-user"></i>
+  								<input type="text" id="name" placeholder="Name">
+  							</div>
+  							<div class="input-feild">
+  								<i class="fa-solid fa-envelope"></i>
+  								<input type="email"id="email"  placeholder="Email">
+  							</div>
+  							<div class="input-feild">
+  								<i class="fa-solid fa-right-to-bracket"></i>
+  								<input type="password" id="password" placeholder="Password">
+  							</div>
+  							<p>Lost password ? <a href="#">Click here</a></p>
+  						</div>
+  						<div class="button-feild px-5">
+  							<button  type="button" id="signupBtn" onclick="signUp()">Sign-Up</button>
+  							<button  type="button" id="signinBtn" onclick="signIn()">Sign-In</button>
+  						</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+
+
+
+  	<script type="text/javascript">
+  		let signupBtn = document.getElementById("signupBtn");
+  		let signinBtn = document.getElementById("signinBtn");
+  		let namefeild = document.getElementById("namefeild");
+  		let title = document.getElementById("title");
+
+  		
+  	    var email = document.getElementById("email");
+  	    var password = document.getElementById("password");
+
+  	    function signIn(){
+  			document.getElementById("namefeild").style.maxHeight = "0" ;
+  			document.getElementById("title").innerHTML = "Sign-In" ;
+  			document.getElementById("signinBtn").style.backgroundColor = "#3c00a0" ;
+  			document.getElementById("signupBtn").style.backgroundColor = "#eaeaea" ;
+
+  			if (email.value === "" ) {
+  				document.getElementById("email").style.border= "1px solid";
+  				document.getElementById("email").style.borderColor= "red";
+  			}else if (email.value) {
+  				document.getElementById("email").style.border= "none";
+  				document.getElementById("email").style.borderColor= "none";
+  			}
+  			if (password.value === "" ) {
+  				document.getElementById("password").style.border= "1px solid";
+  				document.getElementById("password").style.borderColor= "red";
+  			}else if (password.value) {
+  				document.getElementById("password").style.border= "none";
+  				document.getElementById("password").style.borderColor= "none";
+  			}
+  			
+  		}
+
+
+  		function signUp(){
+  			document.getElementById("namefeild").style.maxHeight = "70px" ;
+  			document.getElementById("title").innerHTML = "Sign-Up" ;
+  			document.getElementById("signupBtn").style.backgroundColor = "#3c00a0" ;
+  			document.getElementById("signinBtn").style.backgroundColor = "#eaeaea" ;
+
+  			var name = document.getElementById("name");
+
+  			if (name.value === "" ) {
+  				document.getElementById("name").style.border= "1px solid";
+  				document.getElementById("name").style.borderColor= "red";
+  			}else if (name.value) {
+  				document.getElementById("name").style.border= "none";
+  				document.getElementById("name").style.borderColor= "none";
+  			}
+
+  			if (email.value === "" ) {
+  				document.getElementById("email").style.border= "1px solid";
+  				document.getElementById("email").style.borderColor= "red";
+  			}else if (email.value) {
+  				document.getElementById("email").style.border= "none";
+  				document.getElementById("email").style.borderColor= "none";
+  			}
+  			if (password.value === "" ) {
+  				document.getElementById("password").style.border= "1px solid";
+  				document.getElementById("password").style.borderColor= "red";
+  			}else if (password.value) {
+  				document.getElementById("password").style.border= "none";
+  				document.getElementById("password").style.borderColor= "none";
+  			}
+
+  			
+  		}
+
+
+
+  		/*function signUp(){
+  			var name = document.getElementById("name");
+  			var email = document.getElementById("email");
+  			var password = document.getElementById("password");
+
+  			if (name.value === "" ) {
+  				document.getElementById("name").style.border= "1px solid";
+  				document.getElementById("name").style.borderColor= "red";
+  			}else if (name.value) {
+  				document.getElementById("name").style.border= "none";
+  				document.getElementById("name").style.borderColor= "none";
+  			}
+
+  			if (email.value === "" ) {
+  				document.getElementById("email").style.border= "1px solid";
+  				document.getElementById("email").style.borderColor= "red";
+  			}else if (email.value) {
+  				document.getElementById("email").style.border= "none";
+  				document.getElementById("email").style.borderColor= "none";
+  			}
+  			if (password.value === "" ) {
+  				document.getElementById("password").style.border= "1px solid";
+  				document.getElementById("password").style.borderColor= "red";
+  			}else if (password.value) {
+  				document.getElementById("password").style.border= "none";
+  				document.getElementById("password").style.borderColor= "none";
+  			}
+  		}*/
+
+
+  		
+
+  		
+
+  		// function lal(){
+  			
+  		// 	signinBtn.onclick = function(){
+  		// 	namefeild.style.maxHeight = "0";
+  		// 	title.innerHTML = "Sign-In";
+  		// 	signupBtn.classList.add("disable");
+  		// 	signinBtn.classList.remove("disable");
+
+  		//     }
+  		//     signupBtn.onclick = function(){
+  		// 	namefeild.style.maxHeight = "70px";
+  		// 	title.innerHTML = "Sign-Up";
+  		// 	signupBtn.classList.remove("disable");
+  		// 	signinBtn.classList.add("disable");
+  		//     }
+  		// }
+  	</script>
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>

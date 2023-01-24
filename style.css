@@ -1,0 +1,65 @@
+style.css
+*{
+	margin:0;
+	padding: 0;
+}
+body{
+	height: 100vh;
+	background-image:linear-gradient(rgba(0,0,50,.8),rgba(0,0,50,.8)), url("ph1.jpg");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.form-box h2{
+	text-align:center;
+	color: #3c00a0;
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+.input-feild{
+	background: #eaeaea;
+	margin:20px 0;
+	display: flex;
+	max-height: 70px;
+	transition: max-height 0.5s;
+	overflow: hidden;
+}
+input{
+	width: 100%;
+	background: transparent;
+	border:0;
+	outline: 0;
+	padding: 10px 25px;
+}
+i{  
+	font-size: 29px;
+	color:#999;
+	padding: 9px 2px;
+}
+p{
+	font-size: 17px;
+	color: black;
+}
+p a{
+	text-decoration: none;
+	color: red
+}
+.button-feild button{
+	flex-basis: 40%;
+	height: 40px;
+	width: 120px;
+	margin-right: 50px;
+	border-radius: 30px;
+	border:0;
+	outline: 0;
+	cursor: pointer;
+	transition: 1s;
+}
+.button-feild button:focus{
+	color: white;
+}
+#signupBtn{
+	background-color: #3c00a0;
+	
+}
